@@ -1,0 +1,241 @@
+/** @format */
+
+@tailwindcss /base;
+
+@tailwindcss /components;
+
+@tailwindcss /utilities;
+
+/* @import url("https://fonts.googleapis.com/css?family=Open Sans:300,400,500,550,600,900"); */
+/* @import url("http://fonts.cdnfonts.com/css/coolvetica-2"); */
+
+/* @font-face {
+  font-family: "Open Sans";
+  src: local("Open Sans"),
+    url(./fonts/OpenSans-Light-webfont.woff) format("truetype");
+} */
+
+* {
+  scroll-behavior: smooth;
+}
+
+:root {
+  /* Color settings */
+  --app-bg-color: #ffffff;
+  --app-bg-color-alt: #f8f8ff;
+  --app-bg-alt: #000;
+  --app-grey-light: #ededed;
+  --app-grey-medium: #c0c0c0;
+  --app-grey: #6e6d6d;
+  --app-blue-light: #eef0ff;
+  --app-green: #318509;
+  --app-purple: #4e0985;
+  --app-blue: #3b4ef2;
+  --app-orange: #f2bf3b;
+  --app-text-color: #000;
+  --app-tooltip-bg: #404040;
+  /* Width Settings  */
+  /* Font settings */
+  --app-primary-font: "Roboto", helvetica;
+  --app-secondary-font: "Coolvetica", sans-serif;
+  --app-border-radius-sm: 10px;
+  --app-letter-spacing-lg: 0.5rem;
+  --app-letter-spacing-md: 0.2rem;
+  /* Z-Index settings */
+  --header-z-index: 1000;
+  --sidebar-z-index: 1500;
+  --form-z-index: 2000;
+  --overlay-z-index: 2000;
+  --modal-z-index: 2000;
+  --select-z-index: 2000;
+  --loader-z-index: 2500;
+  --toast-z-index: 2500;
+  /* settings */
+  --app-header-height: 67px;
+  --auth-header-height: 74px;
+}
+
+* {
+  padding: 0px;
+  margin: 0px;
+  font-family: helvetica, var(--app-primary-font), -apple-system,
+    BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell,
+    "Open Sans", "Helvetica Neue", sans-serif;
+  /* color: var(--app-text-color); */
+  /* font-weight: 400 !important; */
+}
+
+body {
+  background: var(--app-bg-color);
+}
+
+*:not(*:hover, *:hover *) {
+  -webkit-transition: 0.1s all ease-in-out;
+  -o-transition: 0.1s all ease-in-out;
+  transition: 0.1s all ease-in-out;
+}
+
+*:focus {
+  transition: 0.1s all ease-in-out;
+  outline: 2px dotted;
+  outline-color: #000;
+  opacity: 1 !important;
+}
+
+ul,
+ol {
+  padding: 0px;
+  margin: 0px;
+}
+
+li {
+  list-style: none;
+}
+
+a:focus {
+  outline: none;
+}
+
+button:focus {
+  outline: none;
+  /* outline: 1px dashed var(--app-blue); */
+}
+
+.app-text-grey {
+  color: var(--app-grey);
+}
+
+.import {
+  padding-top: 5px !important;
+  padding-bottom: 5px !important;
+  /* background-color: var(--app-blue-light) !important; */
+}
+
+.function,
+.event,
+.meta {
+  font-weight: 700;
+  text-align: center;
+  padding: 5px 10px;
+  border-radius: 4px;
+  font-size: 14px;
+  user-select: none;
+}
+
+.function.mini,
+.event.mini,
+.meta.mini {
+  font-weight: 800;
+  text-align: center;
+  padding: 3px 7px;
+  border-radius: 4px;
+  font-size: 11px;
+}
+
+.function {
+  background-color: #ffe2e2;
+  color: #c10f0f;
+}
+
+.event {
+  background-color: #fff9e2;
+  color: #c1b00f;
+}
+
+.meta {
+  background-color: #e8e8e8;
+}
+
+.screen-size-msg {
+  line-height: 3rem;
+}
+
+@media screen and (min-width: 1280px) and (max-width) {
+  .left {
+    /* width: 100px; */
+  }
+}
+
+::-webkit-scrollbar {
+  width: 3px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+  border-radius: 25px;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #a5aeff;
+  border-radius: 25px;
+}
+
+::-webkit-scrollbar-button {
+  height: 30px;
+}
+
+.sticky-default {
+  position: sticky;
+  top: 0;
+  z-index: var(--header-z-index);
+}
+
+.bg-color {
+  background-color: var(--app-bg-color);
+}
+
+.full-width {
+  width: 100% !important;
+}
+
+.link-text {
+  color: var(--app-blue);
+  text-decoration: none;
+}
+
+.link-text:hover {
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.big-logo svg {
+  transform: scale(1.8);
+}
+
+.grey {
+  color: var(--app-grey-medium);
+}
+
+.default-link:hover,
+.default-link:focus {
+  color: var(--app-blue);
+  text-decoration: underline;
+  transition: 0.1s all ease-in-out;
+}
+
+.def-links a {
+  color: #a7a7a7;
+  text-decoration: underline;
+  transition: 0.1s all ease-in-out;
+}
+
+.def-links a:hover {
+  color: var(--app-blue);
+}
+
+.scale-85 {
+  transform: scale(0.85);
+}
+
+.img-full span {
+  /* width: 100% !important; */
+}
+
+.b-1 {
+  border-right: 1px solid var(--app-grey-light);
+}
+
+.b-2 {
+  border-right: 2px solid var(--app-grey-light);
+}

@@ -1,0 +1,66 @@
+.container {
+  position: relative;
+}
+
+.container label {
+  color: #797878;
+  font-size: 14px;
+  line-height: 1;
+  font-weight: 500;
+  display: inline-block;
+  margin-bottom: 15px;
+}
+
+.container input {
+  border-radius: 12px;
+  border: 1px solid #dfdfdf;
+  width: 100%;
+  padding: 10px 10px;
+  color: #555;
+  background-color: #fff;
+  /* min-height: 46px; */
+}
+
+.container input::placeholder {
+  color: #cfcfcf;
+}
+
+@media screen and (min-width: 400px) {
+  .container input {
+    padding: 10px 25px;
+  }
+}
+
+.container input:focus {
+  outline: none;
+}
+
+.container.error input {
+  /* border: 1px solid red; */
+}
+
+.error-message {
+  position: absolute;
+  margin-top: 3px;
+  color: red;
+  font-size: 0.8rem;
+}
+
+.password-svg {
+  position: absolute;
+  top: 16px;
+  right: 10px;
+  cursor: pointer;
+}
+
+.password-svg path {
+  fill: var(--app-grey-medium);
+}
+
+.password-svg:focus {
+  outline: none;
+}
+
+.password-svg:focus path {
+  fill: var(--app-blue);
+}

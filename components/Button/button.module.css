@@ -1,0 +1,71 @@
+.container {
+  position: relative;
+  overflow: hidden;
+  color: #fff;
+  background: var(--app-blue);
+  width: auto;
+  border-radius: 10px;
+  padding: 10px 33px;
+  text-align: center;
+  transition: 0.5s;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container.secondary {
+  background-color: inherit;
+  border: 1px solid var(--app-blue);
+  color: var(--app-blue);
+}
+
+.container.secondary:hover {
+  color: #fff;
+  background-color: var(--app-blue);
+}
+
+.container:focus {
+  outline: 4px solid #a4cafe;
+}
+
+.container:not(.secondary):hover,
+.container:not(.secondary):focus {
+  color: #fff;
+}
+
+.container:not(:disabled)::before {
+  content: "";
+  display: block;
+  position: absolute;
+  background: rgba(255, 255, 255, 0.5);
+  width: 70px;
+  height: 100%;
+  top: 0;
+  filter: blur(15px);
+  transform: translateX(-230px) skewX(-15deg);
+}
+
+.container:not(:disabled)::after {
+  content: "";
+  display: block;
+  position: absolute;
+  background: rgba(255, 255, 255, 0.4);
+  width: 50px;
+  height: 100%;
+  top: 0;
+  filter: blur(15px);
+  transform: translateX(-230px) skewX(-15deg);
+}
+
+.container:not(:disabled):hover::before,
+.container:not(:disabled):focus::before,
+.container:not(:disabled):hover::after,
+.container:not(:disabled):focus::after {
+  transform: translateX(280px) skewX(-15deg);
+  transition: 1s;
+}
+
+.container:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}

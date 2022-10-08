@@ -1,0 +1,75 @@
+.container {
+  height: calc(100vh - var(--app-header-height));
+  /* overflow-y: hidden; */
+}
+
+.left {
+  width: 350px;
+  background-color: var(--app-bg-color-alt);
+  height: calc(100vh - var(--app-header-height));
+  /* overflow: auto; */
+}
+
+.left .tab {
+  background-color: var(--app-bg-color-alt);
+  border-left: 6px solid transparent;
+  color: #bebebe;
+  transition: 0.2s border ease-in-out;
+}
+
+.left .tab:hover,
+.left .tab:focus {
+  transition: 0.3s color ease-in-out;
+  color: var(--app-blue);
+}
+
+.left .tab:not(.active) svg path {
+  fill: #bebebe;
+}
+
+.left .tab.active {
+  border-left: 6px solid var(--app-blue);
+  color: var(--app-blue);
+}
+
+.middle {
+  background-color: var(--app-bg-color);
+  border-left: 1px solid #e5e7eb;
+  border-right: 1px solid #e5e7eb;
+  height: calc(100vh - var(--app-header-height));
+  overflow: auto;
+}
+
+.filter {
+  cursor: pointer;
+  padding: 13px 18px;
+  border-radius: 10px;
+  border: 1px solid var(--app-blue);
+}
+
+.filter * {
+  transition: 0.1s all ease-in-out;
+}
+
+.filter svg path {
+  fill: var(--app-blue);
+}
+
+.filter:hover,
+.filter.active {
+  background-color: var(--app-blue);
+}
+
+.filter:hover svg path,
+.filter.active svg path {
+  fill: #fff;
+}
+
+.right {
+  height: calc(100vh - var(--app-header-height)) !important;
+  overflow: auto;
+}
+
+.right > div {
+  /* max-width: 750px; */
+}
