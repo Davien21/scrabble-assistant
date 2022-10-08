@@ -1,5 +1,4 @@
 import axios from "axios";
-import { IResponse } from "interfaces";
 import { toast } from "react-toastify";
 
 axios.defaults.baseURL = process.env.NEXT_PUBLIC_BACKEND_BASE_URL;
